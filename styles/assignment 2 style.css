@@ -1,0 +1,373 @@
+/* general style */
+body {
+    margin: 0;
+}
+
+h1, h2, h3, h4 {
+    font-family: "Playfair Display", Arial, Helvetica, sans-serif;
+    font-kerning: none;
+}
+
+h1 {
+    font-size: 3.5rem;
+    font-weight: 800;
+    color: white;
+    margin: 1rem;
+    padding-bottom: 1rem;
+}
+
+h2 {
+    font-size: 2rem;
+}
+
+h3 {
+    font-family: Helvetica, Arial, sans-serif;
+    font-size: 1.2rem;
+    font-weight: 100;
+    color: white;
+}
+
+h4 {
+    font-family: Helvetica, Arial, sans-serif;
+    font-size: 1.2rem;
+    font-weight: 600;
+    color: black;
+    margin: 0;
+}
+
+.hero-container {
+    display: flex;
+    flex-direction: column;
+    background-image: linear-gradient(rgba(255, 255, 255, 0.527),rgba(0, 0, 0, 0.5)), url(../img/solar-panel.jpeg);
+    height: 90vh;
+    background-position: bottom;
+    background-repeat: no-repeat;
+    background-size: cover;
+    align-items: center;
+    justify-content: center;
+}
+
+@media only screen and (max-width: 768px) {
+    h1 {
+        text-align: center;
+    }
+
+    h2 {
+        text-align: center;
+        margin: 2rem;
+    }
+
+    h3 {
+        text-align: center;
+        margin: 2rem;
+    }
+}
+/* end of general style */
+
+/* top bar style */
+.top-bar {
+    margin-top: 1.5rem;
+    margin-bottom: 1rem;
+    display: flex;
+    justify-content: center;
+}
+/* end of top bar style */
+
+/* content style */
+.content-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    height: 100%;
+    background-color: white;
+}
+
+.content-header {
+    padding-top: 5rem;
+    padding-bottom: 5rem;
+    color: white;
+    background-color: rgb(0,48,72);
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    row-gap: 2rem;
+}
+
+.content-container h2 {
+    grid-column-start: 1;
+    grid-column-end: 3;
+    text-align: center;
+    font-weight: 100;
+}
+
+.content-text {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 60px;
+    text-align: center;
+}
+
+p {
+    font-family: Helvetica, Arial, sans-serif;
+    font-size: 1rem;
+    font-weight: lighter;
+    line-height: 1.3;
+    margin-bottom: 3rem;
+}
+
+@media only screen and (max-width: 768px) {
+.content-container h2{
+    margin: 0;
+    font-size: 1.5rem;
+    width: 100%;
+}
+
+p {
+    font-size: 0.8rem;
+}
+}
+
+button {
+    display: inline-block;
+    outline: none;
+    cursor: pointer;
+    font-weight: 400;
+    border-radius: 3px;
+    padding: 12px 24px;
+    border: solid 1px black;
+    color: black;
+    background: white;
+    font-size: 0.8rem;
+}
+
+button:hover {
+    border: solid 3px rgb(252, 187, 0);
+    color: black;
+    font-weight: 600;
+}
+
+.content-img img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+/* end of content style */
+
+
+/* card style */
+ul {
+    list-style: none;
+}
+
+.card {
+    background-color: #fff;
+    border-radius: 0.25rem;
+    box-shadow: 0rem 0.125rem 1.5rem rgb(0 0 0 / 12%);
+    width: 100%;
+}
+
+.card-container img {
+    border-bottom: 0.25rem solid rgb(252, 187, 0);
+    border-radius: 0.25rem 0.25rem 0 0;
+    height: auto;
+    width: 100%;
+}
+
+.card-content {
+    padding: 1rem;
+}
+
+.card-container h2 {
+    grid-column-start: 1;
+    grid-column-end: 4;
+    text-align: center;
+    font-weight: 100;
+}
+
+.header {
+    color: black;
+  margin: 0;
+}
+
+.card-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    column-gap: 20px;
+    row-gap: 20px;
+    padding: 0;
+    margin: 8rem;
+}
+
+.card:nth-child(2) {
+    position: relative;
+    width: auto;
+    height: 0;
+    padding-bottom: 56.25%;
+    grid-row: 2;
+    grid-column-start: 1;
+    grid-column-end: 4;
+    margin-bottom: 3rem;
+}
+
+.video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+@media only screen and (max-width: 768px) {
+.card-container {
+    display: flex;
+    flex-direction: column;
+    margin: 2rem;
+}
+}
+/* end of card style */
+
+/* accordion style */
+.accordion-container h2 {
+    text-align: center;
+    font-weight: 100;
+    margin-top: 0;
+    padding-top: 5rem;
+    padding-bottom: 3rem;
+}
+
+.accordion {
+    background-color: rgb(0,48,72);
+    color: white;
+    font-family: Helvetica, Arial, sans-serif;
+    font-weight: 600;
+    cursor: pointer;
+    padding: 2rem;
+    padding-left: 4rem;
+    padding-right: 4rem;
+    width: 100%;
+    border: none;
+    border-bottom: 2px solid white;
+    border-radius: 0;
+    text-align: left;
+    font-size: 1rem;
+    transition: 0.4s;
+}
+ 
+.active, .accordion:hover {
+    background-color: rgb(252, 187, 0);
+    color: black;
+    border: none;
+    border-bottom: 2px solid white;
+    border-radius: 0;
+}
+
+.accordion:after {
+    font-family: "FontAwesome";
+    font-weight: 900;
+    content: '\f103';
+    color: white;
+    float: right;
+}
+
+.active:after {
+    content: "\f102";
+    color: black;
+}
+  
+.panel {
+    background-color: rgb(252, 187, 0);
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.2s ease-out;
+}
+  
+.accordion-container p {
+    margin-bottom: 2rem;
+    padding-top: 1rem;
+    padding-left: 4rem;
+    padding-right: 4rem;
+    color: black;
+}
+/* end of accordion style */
+
+/* footer style */
+.footer-container {
+    background-color: white;
+}
+
+.footer-container h2 {
+    text-align: center;
+    font-weight: 100;
+    margin-left: 2rem;
+    margin-right: 2rem;
+    padding-top: 3rem;
+    color: black;
+}
+
+.footer {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    padding: 3rem;
+    margin-right: 3rem;
+    margin-left: 3rem;
+    font-family: Helvetica, Arial, sans-serif;
+    text-align:center;
+}
+
+.google-map {
+    padding-bottom: 50%;
+    position: relative;
+}
+  
+.google-map iframe {
+    height: 100%;
+    width: 100%;
+    left: 0;
+    top: 0;
+    position: absolute;
+}
+
+.footer .copyright {
+    padding-top: 5rem;
+    color:gray;
+    font-size: 0.8em;
+    grid-column-start: 1;
+    grid-column-end: 3;
+}
+
+.footer .row a {
+    color:gray;
+    font-size: 0.8em;
+    text-decoration: none;
+}
+
+.footer .row a:hover {
+    color: black;
+    font-weight: 600;
+    transition: 0.2s;
+}
+
+.footer .row ul {
+    display: flex;
+    flex-direction: column;
+    gap: 3rem;
+    text-align: left;
+}
+
+.footer .row ul li {
+    display: flex;
+    flex-direction: column;
+
+}
+
+@media only screen and (max-width: 768px) {
+.footer .row ul {
+    padding: 0;
+    margin: 0;
+}
+
+.footer .row li {
+    margin: 0;
+}
+}
