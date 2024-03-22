@@ -34,7 +34,18 @@ h4 {
     color: black;
     margin: 0;
 }
+/* end of general style */
 
+/* top bar style */
+.top-bar {
+    margin-top: 1.5rem;
+    margin-bottom: 1rem;
+    display: flex;
+    justify-content: center;
+}
+/* end of top bar style */
+
+/* hero banner */
 .hero-container {
     display: flex;
     flex-direction: column;
@@ -52,26 +63,12 @@ h4 {
         text-align: center;
     }
 
-    h2 {
-        text-align: center;
-        margin: 2rem;
-    }
-
     h3 {
         text-align: center;
-        margin: 2rem;
+        margin: 3rem;
     }
 }
-/* end of general style */
-
-/* top bar style */
-.top-bar {
-    margin-top: 1.5rem;
-    margin-bottom: 1rem;
-    display: flex;
-    justify-content: center;
-}
-/* end of top bar style */
+/* end of hero banner style */
 
 /* content style */
 .content-container {
@@ -99,7 +96,18 @@ h4 {
     font-weight: 100;
 }
 
-.content-text {
+.content-text1 {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 60px;
+    text-align: center;
+    grid-row-start: 2;
+    grid-column-start: 1;
+}
+
+.content-text2 {
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -116,18 +124,6 @@ p {
     margin-bottom: 3rem;
 }
 
-@media only screen and (max-width: 768px) {
-.content-container h2{
-    margin: 0;
-    font-size: 1.5rem;
-    width: 100%;
-}
-
-p {
-    font-size: 0.8rem;
-}
-}
-
 button {
     display: inline-block;
     outline: none;
@@ -142,15 +138,33 @@ button {
 }
 
 button:hover {
-    border: solid 3px rgb(252, 187, 0);
+    transition: all 0.4s ease;
+    border: solid 1px rgb(252, 187, 0);
     color: black;
-    font-weight: 600;
 }
 
 .content-img img{
     width: 100%;
     height: 100%;
     object-fit: cover;
+    grid-column-start: 2;
+    grid-column-end: 3;
+}
+
+@media only screen and (max-width: 768px) {
+    .content-container {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .content-header {
+        padding-left: 3rem;
+        padding-right: 3rem;
+    }
+
+    h2 {
+        margin-top: 0;
+    }
 }
 /* end of content style */
 
@@ -197,6 +211,8 @@ ul {
     row-gap: 20px;
     padding: 0;
     margin: 8rem;
+    margin-top: 4rem;
+    margin-bottom: 4rem;
 }
 
 .card:nth-child(2) {
@@ -243,8 +259,6 @@ ul {
     font-weight: 600;
     cursor: pointer;
     padding: 2rem;
-    padding-left: 4rem;
-    padding-right: 4rem;
     width: 100%;
     border: none;
     border-bottom: 2px solid white;
@@ -252,11 +266,13 @@ ul {
     text-align: left;
     font-size: 1rem;
     transition: 0.4s;
+    display: grid;
+    grid-template-columns: 10fr 1fr;
 }
  
 .active, .accordion:hover {
-    background-color: rgb(252, 187, 0);
-    color: black;
+    background-color: rgb(0, 95, 143);
+    color: white;
     border: none;
     border-bottom: 2px solid white;
     border-radius: 0;
@@ -268,15 +284,15 @@ ul {
     content: '\f103';
     color: white;
     float: right;
+    margin: auto;
 }
 
 .active:after {
     content: "\f102";
-    color: black;
 }
   
 .panel {
-    background-color: rgb(252, 187, 0);
+    background-color: rgb(0, 95, 143);
     max-height: 0;
     overflow: hidden;
     transition: max-height 0.2s ease-out;
@@ -287,7 +303,7 @@ ul {
     padding-top: 1rem;
     padding-left: 4rem;
     padding-right: 4rem;
-    color: black;
+    color: white;
 }
 /* end of accordion style */
 
@@ -362,12 +378,22 @@ ul {
 }
 
 @media only screen and (max-width: 768px) {
-.footer .row ul {
-    padding: 0;
-    margin: 0;
-}
+    .footer {
+        display: flex;
+        flex-direction: column;
+    }
 
-.footer .row li {
-    margin: 0;
-}
+    .footer-container h2 {
+        margin-top: 2rem;
+        margin-bottom: 0;
+    }
+
+    .footer-container ul li {
+        text-align: center;
+    }
+
+    .footer-container ul {
+        padding: 0;
+        padding-bottom: 3rem;
+    }
 }
