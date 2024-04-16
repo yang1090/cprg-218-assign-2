@@ -14,16 +14,16 @@
 </head>
 
 <body>
-  <section class="top-bar">
+  <header role="banner" class="top-bar">
     <img src="img/VOXSOL logo.svg" height="40px" alt="VOXSOL Logo">
-  </section>
+  </header>
 
-  <section class="hero-container">
+  <header role="hero-banner" class="hero-container">
       <h1>Empowering Tomorrow</h1>
       <h3>Explore the Limitless Potential of Solar Energy with VOX SOL</h3>
-  </section>
+  </header>
 
-  <section class="container content-container">
+  <main class="container content-container">
     <h2 class="content-header"><i class="fa-regular fa-sun"></i>Harnessing Clean Energy for a Sustainable Future</h2>
       <div class="content-img">
         <img src="img/resident-panels.jpeg" alt="a house installed solar panels on the rooftops">
@@ -31,8 +31,7 @@
       <div class="content-text1">
         <h2>Residential Solar Panels</h2>
         <p>VOX SOL offers state-of-the-art residential solar panel systems tailored to meet your energy needs. Our expert team designs and installs customized solar solutions for homes, maximizing energy efficiency and cost savings.</p>
-        <button class="arrow-button">Learn more<span class="arrow"></span>
-        </button>
+        <button class="button with-fallback" type="button">Learn more</button>
       </div>
 
       <div class="content-img">
@@ -41,16 +40,16 @@
       <div class="content-text2">
         <h2>Commercial Solar Projects</h2>
         <p>VOX SOL specializes in developing large-scale solar projects for businesses, organizations, and municipalities. Our comprehensive approach includes site assessment, system design, financing options, and installation services.</p>
-        <button>Learn more</button>
+        <button class="button with-fallback" type="button">Learn more</button>
       </div>
-  </section>
+  </main>
 
-  <section class="container">
+  <main class="container">
     <ul class="card-container">
       <h2>Why Solar Energy</h2>
       <li class="card">
         <iframe class="video"
-        src="https://www.youtube.com/embed/1kUE0BZtTRc?si=pRXdXtjrI2smFcTI" allowfullscreen></iframe>
+        src="https://www.youtube.com/embed/1kUE0BZtTRc?si=pRXdXtjrI2smFcTI" allowfullscreen title="Renewable Energy 101 National Geographic"></iframe>
       </li>
       <h2>Our Services</h2>
       <li class="card">
@@ -87,9 +86,9 @@
         </div>
       </li>
     </ul>
-  </section>
+  </main>
 
-  <section class="container accordion-container">
+  <section role="accordin" class="container accordion-container">
     <h2>Frequently Asked Questions</h2>
     <button class="accordion">What are the benefits of switching to solar energy?</button>
     <div class="panel">
@@ -108,7 +107,7 @@
     </div>
   </section>
 
-  <section class="footer-container">
+  <footer class="footer-container">
     <h2>Visit Us and Find Out Your Best Option</h2>
     <div class="footer">
       <div class="row">
@@ -121,12 +120,12 @@
         </ul>
       </div>
       <div class="google-map">
-        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2507.404134475012!2d-114.0933033032104!3d51.06408939999998!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x53716f9268a69e81%3A0xb1db5e68bd61e28!2sSouthern%20Alberta%20Institute%20of%20Technology!5e0!3m2!1sen!2sca!4v1709707475940!5m2!1sen!2sca" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2507.404134475012!2d-114.0933033032104!3d51.06408939999998!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x53716f9268a69e81%3A0xb1db5e68bd61e28!2sSouthern%20Alberta%20Institute%20of%20Technology!5e0!3m2!1sen!2sca!4v1709707475940!5m2!1sen!2sca" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade" title="1301 16 Ave NW, Calgary, AB T2M 0L4"></iframe>
       </div>
       <div class="copyright">
         &copy; Yang <span id="year"></span> Southern Alberta Institute of Technology - All Rights Reserved
       </div>
     </div>
-  </section>
+  </footer>
 </body>
 </html>

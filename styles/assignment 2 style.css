@@ -143,6 +143,11 @@ button:hover {
     color: black;
 }
 
+.button:focus-visible {
+    outline: 3px solid deepskyblue;
+    outline-offset: 3px;
+}
+  
 .content-img img{
     width: 100%;
     height: 100%;
@@ -305,6 +310,11 @@ ul {
     padding-right: 4rem;
     color: white;
 }
+
+.accordion:focus-visible {
+    outline: 3px solid deepskyblue;
+    outline-offset: 3px;
+}
 /* end of accordion style */
 
 /* footer style */
@@ -346,14 +356,14 @@ ul {
 
 .footer .copyright {
     padding-top: 5rem;
-    color:gray;
+    color:black;
     font-size: 0.8em;
     grid-column-start: 1;
     grid-column-end: 3;
 }
 
 .footer .row a {
-    color:gray;
+    color:black;
     font-size: 0.8em;
     text-decoration: none;
 }
